@@ -76,10 +76,6 @@ stages:
       eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
     )
   jobs:
-- stage: 'Deploy'
-  displayName: 'Deploy the web application'
-  dependsOn: Build
-  jobs:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
